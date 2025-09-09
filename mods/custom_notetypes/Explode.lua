@@ -1,10 +1,3 @@
---[[ 
-    Script de nota Explode (melhorado)
-    - Apertar a nota: explosão mais forte (40% de vida).
-    - Ignorar a nota: explosão menor (25% de vida).
-    - Combo zera em ambos os casos.
-    - Feedback visual, som e animações incluídos.
---]]
 
 local explodeHits = 0 -- contador de explosões sofridas
 
@@ -31,7 +24,7 @@ function goodNoteHit(id, direction, noteType, isSustainNote)
 
         -- Som com pitch levemente aleatório
         playSound('boom', 1.2 + math.random() * 0.8)
-
+        setProperty('combo', 0) -- zera combo
         -- Tremor forte
         cameraShake('game', 0.07, 0.3)
         cameraShake('hud', 0.05, 0.25)
@@ -46,7 +39,7 @@ function noteMiss(id, direction, noteType, isSustainNote)
     if noteType == "Explode" then
         explodeHits = explodeHits + 1
         setProperty('health', math.max(0, getProperty('health') - 0.25))
-        setProperty('combo', 0) -- zera combo
+
         spawnExplosionEffect()
 
         -- Som mais fraco

@@ -1,0 +1,72 @@
+-- ====== CONFIGURAÇÃO ======
+local offPowerGain = 5      -- quanto aumenta de Off Power por miss
+local healthDrain = 0.15    -- quanto o player perde de HP por miss (0.1 = 10%)
+
+-- ====== VARIÁVEIS ======
+local playerHits = 0
+local playerMisses = 0
+local offPower = 0   -- começa em 0%
+
+-- ===========================
+-- FUNÇÕES
+-- ===========================
+function onCreatePost()
+    updateHUD()
+end
+
+function onUpdatePost(elapsed)
+    updateHUD()
+end
+
+-- Acerto de nota
+function goodNoteHit(id, direction, noteType, isSustainNote)
+    if isSustainNote then return end
+    playerHits = playerHits + 1
+    updateRating()
+end
+
+-- Erro de nota
+function noteMiss(id, direction, noteType, isSustainNote)
+    if isSustainNote then return end
+
+    playerMisses = playerMisses + 1
+    offPower = offPower + offPowerGain
+    if offPower > 100 then offPower = 100 end
+
+    -- tira vida do jogador
+    local curHealth = getProperty('health')
+    setProperty('health', math.max(0, curHealth - healthDrain))
+
+    updateRating()
+end
+
+-- Oponente não conta
+function opponentNoteHit(id, direction, noteType, isSustainNote) end
+
+-- Atualiza rating (Accuracy + Combo Breaks)
+function updateRating()
+    local hits = playerHits
+    local misses = playerMisses
+    local total = hits + misses
+    local pct = 1
+
+    if total > 0 then
+        pct = hits / total
+    end
+
+    setProperty('ratingPercent', pct)
+    updateHUD()
+end
+
+-- HUD (ordem invertida)
+function updateHUD()
+    local accuracy = math.floor((getProperty('ratingPercent') or 0) * 100)
+    local health = math.floor((getProperty('health') or 0) * 50)  -- converte 2.0 → 100%
+    
+    local text = "Health: " .. health .. "%"
+    text = text .. " | Off Power: " .. offPower .. "%"
+    text = text .. " | Combo Breaks: " .. playerMisses
+    text = text .. " | Accuracy: " .. accuracy .. "%"
+
+    setTextString('scoreTxt', text)
+end

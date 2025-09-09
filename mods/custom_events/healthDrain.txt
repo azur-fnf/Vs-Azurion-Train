@@ -1,0 +1,8 @@
+# Começa a drenar 0.25 de vida por tick
+Event, 16, DrainLife, 1, 0.25  
+
+# Começa a drenar 0.5 de vida por tick
+Event, 64, DrainLife, 1, 0.5   
+
+# Para de drenar
+Event, 128, DrainLife, 0, 0

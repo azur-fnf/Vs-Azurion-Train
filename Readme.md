@@ -1,5 +1,5 @@
 # Vs-Azurion-Train Mod
-### **Current Version:** `v0.6.2`
+### **Current Version:** `v0.6.3`
 
 [![Friday Night Funkin'_ Psych Engine 2025-09-10 21-39-09](./art/Friday%20Night%20Funkin'_%20Psych%20Engine%202025-09-10%2021-39-09.gif)](https://www.youtube.com/watch?v=G-SoZl2J1t0)
 

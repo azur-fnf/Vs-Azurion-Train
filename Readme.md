@@ -1,7 +1,7 @@
 # Vs-Azurion-Train Mod
 ### **Current Version:** `v0.6.3`
 
-[![Friday Night Funkin'_ Psych Engine 2025-09-10 21-39-09](./art/Friday%20Night%20Funkin'_%20Psych%20Engine%202025-09-10%2021-39-09.gif)](https://www.youtube.com/watch?v=G-SoZl2J1t0)
+[![Friday Night Funkin'_ Psych Engine 2025-09-10 21-39-09](./art/epicgame.gif)](https://youtu.be/Wod0lYDAXTA)
 
 
 [![⬇️ Download Release](https://img.shields.io/badge/Download-Recent-gray?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ezura-azur/Vs-Azurion-Train/releases)

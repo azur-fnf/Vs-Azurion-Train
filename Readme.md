@@ -1,8 +1,11 @@
+
 # Vs-Azurion-Train Mod
+![icon.png](art/altsad.png)
 
 ## 📊 Project Status & Info
 
 ---
+
 
 ![Repo Size](https://img.shields.io/github/repo-size/ezura-azur/Vs-Azurion-Train?style=for-the-badge)
 ![Game Size DEV](https://img.shields.io/badge/game%20size%20(dev)-535MB-orange?style=for-the-badge)

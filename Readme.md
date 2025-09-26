@@ -6,7 +6,7 @@
 
 ![Repo Size](https://img.shields.io/github/repo-size/ezura-azur/Vs-Azurion-Train?style=for-the-badge)
 ![Game Size DEV](https://img.shields.io/badge/game%20size%20(dev)-535MB-orange?style=for-the-badge)
-![Latest Stable Release](https://img.shields.io/github/v/release/ezura-azur/Vs-Azurion-Train?label=latest%20stable%20version&style=for-the-badge&sort=semver)
+![Latest Release](https://img.shields.io/github/v/release/ezura-azur/Vs-Azurion-Train?label=latest%20stable%20version&style=for-the-badge&sort=semver)
 ![Dev Version](https://img.shields.io/badge/development-0.9.5--dev-8A2BE2?style=for-the-badge)
 ![Contributors](https://img.shields.io/github/contributors/ezura-azur/Vs-Azurion-Train?style=for-the-badge)
 

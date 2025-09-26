@@ -21,6 +21,9 @@
 
 ---
 
+### ⬇️ See Leaks
+[![👀 See Leaks](https://img.shields.io/badge/See%20Leaks-gray?style=for-the-badge&logo=github)](leaks.md)
+
 ## 🕹️ Gameplay Mechanics
 
 Get ready for new challenges and features in Vs-Azurion-Train!
